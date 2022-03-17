@@ -3,7 +3,9 @@
 <?php $nav_inicio = 'active'; ?>
 
 @section('titulo')
-
+<button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#sidebar-wrapper"
+    aria-controls="sidebar-wrapper" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-1x"></i></span></button>
 <a class="navbar-brand">Inicio</a>
 
 
