@@ -33,13 +33,13 @@ return [
     'google' => [ 
         'client_id' => '227731425075-si29h86650onoqtcs37885mmlqqpms1s.apps.googleusercontent.com', 
         'client_secret' => 'xA1_BLqBfmPxaTOgOmu9aIkK' , 
-        'redirect' => 'http://localhost:8000/auth/google/callback',
+        'redirect' => 'https://laravelhealthlab.herokuapp.com/auth/google/callback',
     ],
 
     'facebook' => [
         'client_id' => '649668556428168',
         'client_secret' => 'd3323640ef195ea1c3b90ce24c5b5a26',
-        'redirect' => 'http://localhost:8000/login/facebook/callback',
+        'redirect' => 'https://laravelhealthlab.herokuapp.com/login/facebook/callback',
     ],
 
 ];
