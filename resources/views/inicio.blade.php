@@ -3,9 +3,7 @@
 <?php $nav_inicio = 'active'; ?>
 
 @section('titulo')
-<button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#sidebar-wrapper"
-    aria-controls="sidebar-wrapper" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-        class="fas fa-bars fa-1x"></i></span></button>
+
 <a class="navbar-brand">Inicio</a>
 
 
@@ -13,14 +11,12 @@
 
 @section('panel-header')
 
-
 <div class="panel-header panel-header-lg">
     <img src="img/logo_principal.png" height="80%" width="70%" style="margin-left:auto; margin-right:auto; width:auto;  display: block;">
     <p style="color:white; size:4; text-align: center;">Olá, {{Auth::guard('usuarios')->user()->nome}}</p>
   </div>
 
 @endsection
-
 
 
 @section('content')
