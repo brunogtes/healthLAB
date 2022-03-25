@@ -63,17 +63,18 @@
           @endif
 
           @if ($errors->has('ids'))
-                    <script>
-                        $.confirm({                            
-                            title: 'Atenção!',
-                            content: 'É necessário selecionar um ou mais itens',
-                            type: 'red',
-                            typeAnimated: true,
-                            buttons: {                             
-                                Fechar: function() {}
-                            }
-                        });
-                    </script>
+          <script>
+            $.confirm({
+              title: 'Atenção!',
+              content: 'É necessário selecionar um ou mais itens',
+              type: 'red',
+              typeAnimated: true,
+              buttons: {
+                Fechar: function() {}
+              }
+            });
+          </script>
+          @endif
 
 
           <div class="row">
@@ -983,16 +984,16 @@
     @else
 
     <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-body">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
 
-                <h4><i class="fa fa-exclamation-circle fa-lg"></i> | Você não tem permissão de acesso.</h4>
-                </div>
-            </div>
+            <h4><i class="fa fa-exclamation-circle fa-lg"></i> | Você não tem permissão de acesso.</h4>
+          </div>
         </div>
-    </div> 
-  
+      </div>
+    </div>
+
 
     @endcan
   </div>
