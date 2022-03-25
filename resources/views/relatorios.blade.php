@@ -6,7 +6,7 @@
 
 @section('titulo')
 
-<a class="navbar-brand">@can('admin')Relatórios@else Acesso negado! @endcan</a>
+<a class="navbar-brand">@can('admin')Relatórios @else Acesso negado! @endcan</a>
 
 @endsection
 
