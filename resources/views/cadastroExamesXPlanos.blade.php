@@ -32,17 +32,16 @@
 
                     @if ($errors->has('ids'))
                     <script>
-                        $.confirm({
+                        $.confirm({                            
                             title: 'Atenção!',
                             content: 'É necessário selecionar um ou mais itens',
                             type: 'red',
                             typeAnimated: true,
-                            buttons: {
+                            buttons: {                             
                                 Fechar: function() {}
                             }
                         });
                     </script>
-                    @endif
 
                     <div class="row">
                         <div class="col-md-8"></div>

@@ -62,6 +62,19 @@
           </div>
           @endif
 
+          @if ($errors->has('ids'))
+                    <script>
+                        $.confirm({                            
+                            title: 'Atenção!',
+                            content: 'É necessário selecionar um ou mais itens',
+                            type: 'red',
+                            typeAnimated: true,
+                            buttons: {                             
+                                Fechar: function() {}
+                            }
+                        });
+                    </script>
+
 
           <div class="row">
             <div class="col-md-8"></div>

@@ -36,14 +36,17 @@
                     @endif
 
                     @if ($errors->has('ids'))
-                   
-                   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                       <strong>{{ $errors->first('ids') }}
-                           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                               <span aria-hidden="true">&times;</span>
-                           </button>
-                   </div>
-                   @endif
+                    <script>
+                        $.confirm({                            
+                            title: 'Atenção!',
+                            content: 'É necessário selecionar um ou mais itens',
+                            type: 'red',
+                            typeAnimated: true,
+                            buttons: {                             
+                                Fechar: function() {}
+                            }
+                        });
+                    </script>
 
                     <div class="row">
                         <div class="col-md-8"></div>

@@ -261,6 +261,17 @@ class UsuariosController extends Controller
 
     public function desativarAllUsuarios(Request $request)
     {
+
+        $mensagens = [
+            //IDS
+            'ids.required' => 'É necessário selecionar um ou mais itens',           
+        ];
+
+        $request->validate([
+            'ids' => 'required',
+
+        ], $mensagens);
+
         $ids = $request->get('ids');
 
         $dbs = DB::update('UPDATE usuarios SET status = "0" WHERE usuario_id IN (' . implode(",", $ids) . ')');
@@ -276,6 +287,17 @@ class UsuariosController extends Controller
 
     public function ativarAllUsuarios(Request $request)
     {
+
+        $mensagens = [
+            //IDS
+            'ids.required' => 'É necessário selecionar um ou mais itens',           
+        ];
+
+        $request->validate([
+            'ids' => 'required',
+
+        ], $mensagens);
+        
         $ids = $request->get('ids');
 
         $dbs = DB::update('UPDATE usuarios SET status = "1" WHERE usuario_id IN (' . implode(",", $ids) . ')');
