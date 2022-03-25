@@ -43,8 +43,6 @@
                             }
                         });
                     </script>
-
-
                     @endif
 
                     <div class="row">
