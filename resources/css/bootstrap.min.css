@@ -5,30 +5,50 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-
-
- 
- .form-upload{
-    background:#333;
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
+ .personal-image {
     text-align: center;
-    width: 350px;
   }
-  
-  .input-personalizado{
+  .personal-image input[type="file"] {
+    display: none;
+  }
+  .personal-figure {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+  .personal-avatar {
     cursor: pointer;
+    width: 120px;
+    height: 120px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out .3s;
   }
-  
-  .imagem{
-    max-width: 100%;
+  .personal-avatar:hover {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
   }
-  
-  .input-file{
-    display:none;
+  .personal-figcaption {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    width: inherit;
+    height: inherit;
+    border-radius: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all ease-in-out .3s;
   }
-
+  .personal-figcaption:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .5);
+  }
+  .personal-figcaption > img {
+    margin-top: 32.5px;
+    width: 50px;
+    height: 50px;
+  }
 
 /* Menu Pagina Resultado de Exames */
 
@@ -49,6 +69,13 @@
 .card-menu:hover {
     box-shadow: 4px 4px 20px #DADADA;
     transition: .3s linear all;
+    background: #ddd8d8;
+}
+
+.card-menu .active {
+    box-shadow: 4px 4px 20px #DADADA;
+    transition: .3s linear all;
+    background: #ddd8d8;
 }
 
 .card-menu i {
@@ -85,7 +112,7 @@
     font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 
- :root {
+:root {
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -1879,7 +1906,7 @@ pre code {
 .table {
     width: 100%;
     margin-bottom: 1rem;
-    color: #212529
+    color: #212529;
 }
 
 .table td,
@@ -5362,7 +5389,7 @@ input[type=submit].btn-block {
     padding: .5rem .75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #f96332;
+    color: black;
     background-color: #fff;
     border: 1px solid #dee2e6
 }
@@ -10618,7 +10645,8 @@ a.text-dark:hover {
         size: a3
     }
     body {
-        min-width: 992px!important
+        min-width: 992px!important;
+       
     }
     .container {
         min-width: 992px!important
