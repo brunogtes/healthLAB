@@ -20,41 +20,16 @@
 @section('content')
 @can('admin')
 <div class="content">
-    <div class="row">
+<div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
 
-                    <div class="row">
-                        <!-- Botão que irá abrir o modal -->
-                        <h3> </h3>
-                        
-                        <p style="padding: .375rem .75rem;">
-                            <a href="#addConvenio" class="btn btn-primary" data-toggle="modal">Relatorio 1</a>
-                        </p>
-                        <p style="padding: .375rem .75rem;">
-                            <a href="#addConvenio" class="btn btn-primary" data-toggle="modal">Relatorio 2</a>
-                        </p>
-                        <p style="padding: .375rem .75rem;">
-                            <a href="#addConvenio" class="btn btn-primary" data-toggle="modal">Relatorio 3</a>
-                        </p>
-                        <p style="padding: .375rem .75rem;">
-                            <a href="#addConvenio" class="btn btn-primary" data-toggle="modal">Relatorio 4</a>
-                        </p>
-                        <p style="padding: .375rem .75rem;">
-                            <a href="#addConvenio" class="btn btn-primary" data-toggle="modal">Relatorio 5</a>
-                        </p>
-
-                    </div>
-
-                    
+                <h4><i class="fa fa-exclamation-circle fa-lg"></i> | Está página esta em construção</h4>
                 </div>
             </div>
-
-
-
         </div>
-    </div>
+    </div> 
 
     @else
 
