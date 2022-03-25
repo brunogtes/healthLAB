@@ -11,64 +11,15 @@
     
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+ <!--     Fonts and icons     -->
+ <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- CSS Files -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
 
-    <!-- Fonts and icons     -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
-    
-
-    <!-- Styles -->
-    <!--<link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/now-ui-dashboard.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-
-
-    <!-- Outth -->
-
-    <meta name="google-signin-client_id" content="227731425075-si29h86650onoqtcs37885mmlqqpms1s.apps.googleusercontent.com">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    
-    <!--   Core JS Files   -->
-    <!--  <script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js') }}" defer></script>-->
-    <!-- <script src="{{ asset('js/core/jquery.min.js') }}" rel="preload"></script>
-  <script src="{{ asset('js/core/popper.min.js') }}" defer></script>
-<script src="{{ asset('js/core/bootstrap.min.js') }}" defer></script>
- <script src="{{ asset('js/core/popper.min.js') }}" defer></script>  -->
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <script src="{{ asset('js/core/custom.js') }}" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-
-   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
-    
-
-
-
-
-    <!-- Chart JS -->
-    <!--<script src="{{ asset('js/plugins/chartjs.min.js') }}" defer></script>-->
-    <!--  Notifications Plugin    -->
-    <script src="{{ asset('js/plugins/bootstrap-notify.js') }}" defer></script>
-    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <!--<script src="{{ asset('js/now-ui-dashboard.min.js') }}" defer></script>-->
-
-
-
-
+ 
 
 </head>
 
@@ -240,8 +191,18 @@
             </footer>
         </div>
     </div>
-
-
+  <!--   Core JS Files   -->
+  <script src="../js/core/jquery.min.js"></script>
+  <script src="../js/core/popper.min.js"></script>
+  <script src="../js/core/bootstrap.min.js"></script>
+  <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Chart JS -->
+  <script src="../js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  
 
 </body>
 

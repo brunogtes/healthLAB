@@ -21,7 +21,7 @@
 <body>
 
     <div id="login-container">
-        <h1>Login1</h1>
+        <h1>Login</h1>
 
 
         @if ($message = Session::get('msg'))

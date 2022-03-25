@@ -22,8 +22,6 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2015 Daniel Eden
 */
-
-
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -2038,7 +2036,6 @@ body {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  
 }
 
 .main {
@@ -3817,29 +3814,6 @@ Created using IcoMoon - icomoon.io
   width: 260px;
   left: 0;
   z-index: 1030;
-}
-
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-}
-
-
-
-dropdown-toggle::after {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: .255em;
-  vertical-align: .255em;
-  content: "";
-  border-top: .3em solid;
-  border-right: .3em solid transparent;
-  border-bottom: 0;
-  border-left: .3em solid transparent;
 }
 
 .sidebar .sidebar-wrapper,
