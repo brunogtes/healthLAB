@@ -42,7 +42,7 @@ $(document).ready(function () {
     
             $.ajax({
                 type: 'GET',
-                url: '/cadastrarUsuarios/pegarCidades/' + convenio_id,
+                url: '/cadastrarUsuarios/pegarPlanos/' + convenio_id,
                 dataType: 'json',
                 success: function (data) {
     

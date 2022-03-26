@@ -216,7 +216,7 @@ Route::delete('/ativarAllExameXPlano', [ExamesXPlanosController::class, 'ativarA
 
 /* Cadastro de Usuarios */
 
-Route::get('/cadastrarUsuarios/pegarCidades/{convenio_id}', [UsuariosController::class, 'pegarCidades']);
+Route::get('/cadastrarUsuarios/pegarPlanos/{convenio_id}', [UsuariosController::class, 'pegarPlanos']);
 
 Route::get('/cadastrarUsuarios', [UsuariosController::class, 'index']);
 

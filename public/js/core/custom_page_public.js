@@ -20,6 +20,7 @@ $(document).ready(function () {
 
                 })
             }, error: function () {
+                $('select[name=plano]').empty();
                 console.log("Erro" + data);
             }
 
