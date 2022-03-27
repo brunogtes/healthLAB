@@ -92,9 +92,8 @@ $( document ).ready(function() {
                     $('select[name=plano]').append('<option value="' + value.plano_id + '">' + value.descricao + '</option>');
 
                 })
-            }, error: function () {
-                $('select[name=plano]').empty();
-                console.log("Erro" + data);
+            }, error: function () {             
+                console.log("Erro");
             }
 
         })
