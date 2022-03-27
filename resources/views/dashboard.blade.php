@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="card-body">
 
-                <h4><i class="fa fa-exclamation-circle fa-lg"></i> | Está página esta em construção</h4>
+                <h4><i class="fa fa-exclamation-circle fa-lg"></i> | Essa página esta em construção</h4>
                 </div>
             </div>
         </div>
