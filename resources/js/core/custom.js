@@ -2,6 +2,46 @@
     
 $(document).ready(function () {
 
+    //################################# CARREGAR PACIENTES  - PAINEL MÉDICO ############################################
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+
+    $('select[name="lista_paciente"]').on('change', function () {
+
+        var usuario_id = $(this).val();
+        console.log("Usuario" + usuario_id);
+
+        $.ajax({
+            type: 'GET',
+            url: '/painelMedico/pegarUsuario/' + usuario_id,
+            dataType: 'json',
+            success: function (data) {
+
+                console.log(data);
+
+                // $('select[name=plano]').empty();
+                $.each(data, function (key, value) {
+
+                    $('#cpf').val(value.cpf);
+                    $('#convenio').val(value.convenio_id);
+                    $('#data_nascimento').val(value.data_nascimento);
+                    $('#plano').val(value.plano_id);
+                  
+                })
+            }, error: function () {
+                console.log("Erro" + data);
+            }
+
+        })
+
+    });
+
+
     //Mascaras
 
     $('.cpf').mask('000.000.000-00', {reverse: true});
