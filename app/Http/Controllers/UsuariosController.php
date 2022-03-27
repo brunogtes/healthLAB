@@ -42,10 +42,14 @@ class UsuariosController extends Controller
 
 
 
-    public function pegarPlanos($convenio_id)
+    public function pegarCidades($convenio_id)
 
     {
-       
+        // $data = ModelPlano::where('convenio_id', $convenio_id)->get();
+        //return response()->json($data, 200);
+        //return  json_encode($data, true);'' 
+
+
         return ModelPlano::where('convenio_id', 'LIKE', '%' . $convenio_id . '%')->get();
     }
     public function search(Request $request)
@@ -267,7 +271,7 @@ class UsuariosController extends Controller
             'ids' => 'required',
 
         ], $mensagens);
-
+        
         $ids = $request->get('ids');
 
         $dbs = DB::update('UPDATE usuarios SET status = "0" WHERE usuario_id IN (' . implode(",", $ids) . ')');
@@ -293,7 +297,7 @@ class UsuariosController extends Controller
             'ids' => 'required',
 
         ], $mensagens);
-
+        
         $ids = $request->get('ids');
 
         $dbs = DB::update('UPDATE usuarios SET status = "1" WHERE usuario_id IN (' . implode(",", $ids) . ')');
