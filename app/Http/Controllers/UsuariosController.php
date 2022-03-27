@@ -42,7 +42,7 @@ class UsuariosController extends Controller
 
 
 
-    public function pegarCidades($convenio_id)
+    public function pegarPlanos($convenio_id)
 
     {
         // $data = ModelPlano::where('convenio_id', $convenio_id)->get();
