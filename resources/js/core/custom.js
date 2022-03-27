@@ -52,19 +52,19 @@ $(document).ready(function () {
         $("[name=form_uploadPicture]").trigger('submit');
    });
    
-    //################################# FUNÇÃO PARA RESET MODAL ############################################
-        $('.modal').on('hidden.bs.modal', function () {
-            $(this)
-                .find("input:not([type=hidden]),textarea,select")
-                .val('')
-                .end()
-                .find("input[type=checkbox], input[type=radio]")
-                .prop("checked", "")
-                .end();
-                $("#msgValidacaoAdicionar").remove();
-                $("#msgValidacaoEditar").remove();
-                location.reload();
-        });
+   //################################# FUNÇÃO PARA RESET MODAL ############################################
+   $('.modal').on('hidden.bs.modal', function () {
+    $(this)
+        .find("input:not([type=hidden]),textarea,select")
+        .val('')
+        .end()
+        .find("input[type=checkbox], input[type=radio]")
+        .prop("checked", "")
+        .end();
+    $("#msgValidacaoAdicionar").remove();
+    $("#msgValidacaoEditar").remove();
+    location.reload();
+});
     
     //################################# FILTRO PARA CAMPO SELECT CONVENIO x PLANOS ############################################
     
