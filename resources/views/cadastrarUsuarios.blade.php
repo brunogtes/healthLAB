@@ -142,9 +142,9 @@
                     <th>{{$usuarios->email}}</th>
                     <th>{{$status = ($usuarios->status == 0) ? "INATIVO"  : "ATIVO";}}</th>
                     <th>
-                      <a href="" data-toggle="modal" data-target="#editUsuario{{$usuarios->usuario_id}}"><i class="fas fa-edit fa-lg" title="Editar"></i></a>
-                      <a href="" data-toggle="modal" data-target='#visualizarUsuario{{$usuarios->usuario_id}}'><i class="fas fa-eye fa-lg" title="Visualizar"></i></a>
-                      <a href="" data-toggle="modal" data-target="#apagarUsuario{{$usuarios->usuario_id}}"><i class="fas fa-trash fa-lg" title="Apagar"></i></a>
+                      <a href="" data-toggle="modal" data-target="#editUsuario{{$usuarios->id}}"><i class="fas fa-edit fa-lg" title="Editar"></i></a>
+                      <a href="" data-toggle="modal" data-target='#visualizarUsuario{{$usuarios->id}}'><i class="fas fa-eye fa-lg" title="Visualizar"></i></a>
+                      <a href="" data-toggle="modal" data-target="#apagarUsuario{{$usuarios->id}}"><i class="fas fa-trash fa-lg" title="Apagar"></i></a>
                     </th>
                   </tr>
                   @endforeach
@@ -423,7 +423,7 @@
               <!-- Modal Para editar Novo Usuario -->
 
               @foreach($listaUsuarios as $usuarios)
-              <div class="modal fade" id="editUsuario{{$usuarios->usuario_id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal fade" id="editUsuario{{$usuarios->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
 
                   <!-- Conteúdo do modal-->
@@ -680,7 +680,7 @@
               <!-- Modal Para Visualizar Novo Usuario -->
 
               @foreach($listaUsuarios as $usuarios)
-              <div class="modal fade" id="visualizarUsuario{{$usuarios->usuario_id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal fade" id="visualizarUsuario{{$usuarios->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
 
                   <!-- Conteúdo do modal-->
@@ -910,7 +910,7 @@
 
               <!-- Modal Para Desativar um Usuario -->
               @foreach($listaUsuarios as $usuarios)
-              <div class="modal fade" id="apagarUsuario{{$usuarios->usuario_id}}" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal fade" id="apagarUsuario{{$usuarios->id}}" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
 
                   <!-- Conteúdo do modal-->
