@@ -301,7 +301,7 @@ class UsuariosController extends Controller
         $ids = $request->get('ids');
 
         $dbs = DB::update('UPDATE usuarios SET status = "1" WHERE id IN (' . implode(",", $ids) . ')');
-
+        
         if ($dbs) {
             $red = redirect('cadastrarUsuarios')->with('msg', 'Ativado com Sucesso!');
         } else {
