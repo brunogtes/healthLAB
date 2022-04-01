@@ -25,6 +25,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
 
+    <script src="../js/core/popper.min.js"></script>
+    <script src="../js/core/bootstrap.min.js"></script>
+    <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../js/core/custom.js"></script>
 
 </head>
 
@@ -216,10 +220,7 @@
     </div>
     <!--   Core JS Files   -->
     
-    <script src="../js/core/popper.min.js"></script>
-    <script src="../js/core/bootstrap.min.js"></script>
-    <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../js/core/custom.js"></script>
+   
     <!-- Chart JS -->
     <script src="../js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
