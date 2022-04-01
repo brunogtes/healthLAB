@@ -137,7 +137,7 @@
 
                   @foreach($listaUsuarios as $usuarios)
                   <tr>
-                    <td><input type="checkbox" name="ids[]" class="selectbox" value="{{$usuarios->usuario_id}}"></td>
+                    <td><input type="checkbox" name="ids[]" class="selectbox" value="{{$usuarios->id}}"></td>
                     <th>{{$usuarios->nome}} {{$usuarios->sobrenome}}</th>
                     <th>{{$usuarios->email}}</th>
                     <th>{{$status = ($usuarios->status == 0) ? "INATIVO"  : "ATIVO";}}</th>
