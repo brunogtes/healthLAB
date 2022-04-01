@@ -274,7 +274,7 @@ class UsuariosController extends Controller
         
         $ids = $request->get('ids');
 
-        $dbs = DB::update('UPDATE usuarios SET status = "0" WHERE usuario_id IN (' . implode(",", $ids) . ')');
+        $dbs = DB::update('UPDATE usuarios SET status = "0" WHERE id IN (' . implode(",", $ids) . ')');
 
 
         if ($dbs) {
@@ -300,7 +300,7 @@ class UsuariosController extends Controller
         
         $ids = $request->get('ids');
 
-        $dbs = DB::update('UPDATE usuarios SET status = "1" WHERE usuario_id IN (' . implode(",", $ids) . ')');
+        $dbs = DB::update('UPDATE usuarios SET status = "1" WHERE id IN (' . implode(",", $ids) . ')');
 
         if ($dbs) {
             $red = redirect('cadastrarUsuarios')->with('msg', 'Ativado com Sucesso!');
