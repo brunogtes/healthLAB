@@ -20,7 +20,7 @@
     <link href="../css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
@@ -29,6 +29,37 @@
     <script src="../js/core/bootstrap.min.js"></script>
     <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
     <script src="../js/core/custom.js"></script>
+    <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-notifications.min.css">
+
+    <script>
+        $(document).ready(function() {
+
+            var down = false;
+
+            $('#bell').click(function(e) {
+
+                var color = $(this).text();
+                if (down) {
+
+                    $('#box').css('height', '0px');
+                    $('#box').css('opacity', '0');
+                    down = false;
+                } else {
+
+                    $('#box').css('height', 'auto');
+                    $('#box').css('opacity', '1');
+                    down = true;
+
+                }
+
+            });
+
+        });
+    </script>
+
+
 
 </head>
 
@@ -147,6 +178,7 @@
 
         <div class="main-panel" id="main-panel">
             <!-- Navbar -->
+
             <nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
@@ -167,11 +199,26 @@
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                     </button>
 
+
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
 
-                        <ul class="navbar-nav">
 
+                        <ul class="nav navbar-nav">
+                        @canany(['funcionario', 'admin'])
+                            <li class="nav-item dropdown-notifications">
+                                <a class="nav-link" id="bell"><i title="Notificações" class="fas fa-bell fa-2x" id="totalNotificacoes"></i>
 
+                                    <div class="notifications" id="box">
+                                        <h2>Notificações</h2>
+                                        <div class="notifications_itens"></div>
+
+                                    </div>
+                                    <p>
+                                        <span class="d-lg-none d-md-block">Notificações</span>
+                                    </p>
+                                </a>
+                            </li>
+                            @endcan
                             <li class="nav-item">
                                 <a class="nav-link" href="perfil"><i title="Perfil" class="fas fa-user fa-2x"></i>
                                     <p>
@@ -198,6 +245,70 @@
                     </div>
                 </div>
             </nav>
+            <script>
+                $(document).ready(function() {
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '/notificacao',
+                        dataType: 'json',
+                        success: function(data) {
+
+                            // alert("sucesso");
+
+                        },
+                        error: function() {
+                            // alert("erro" );
+                        }
+
+                    })
+
+                });
+            </script>
+
+            <script type="text/javascript">
+                var notificationsWrapper = $('.dropdown-notifications');
+                var notifications = notificationsWrapper.find('div.notifications_itens');
+
+                // Enable pusher logging - don't include this in production
+                Pusher.logToConsole = true;
+
+                var pusher = new Pusher('deb72aa236b633d47afc', {
+                    cluster: 'mt1',
+                    namespace: false,
+                    encrypted: true
+                });
+
+                // Subscribe to the channel we specified in our Laravel Event
+                var channel = pusher.subscribe('notification');
+
+                channel.bind('pusher:subscription_succeeded', function(members) {
+                    // alert('successfully subscribed!');
+                });
+
+                // Bind a function to a Event (the full Laravel class)
+                channel.bind('notification-event', function(message) {
+
+                    var existingNotifications = notifications.html();
+                    var newNotificationHtml = `
+       
+          <div class="notifications-item" id="boxItens"> <img src="https://cdn.iconscout.com/icon/free/png-256/attention-3-83556.png" alt="img">
+                                            <div class="text">
+                                                <h4>Atividade Pendente</h4>
+                                                <p>` + message + `</p>
+                                            </div>
+                                        </div>       
+        `;
+                    notifications.html(newNotificationHtml + existingNotifications);
+
+                    var total = $("#boxItens > div").length;
+                    document.getElementById("totalNotificacoes").innerHTML = '&nbsp; ' + total;
+
+                });
+            </script>
+
+
+
             <!-- End Navbar -->
 
             @yield('panel-header')
@@ -219,16 +330,25 @@
         </div>
     </div>
     <!--   Core JS Files   -->
-    
-   
+
+
     <!-- Chart JS -->
     <script src="../js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
     <script src="../js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center: parallax effects -->
     <script src="../js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script>
+    <script src="../js/core/demo.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Javascript method's body can be found in assets/js/demos.js
+            demo.initDashboardPageCharts();
 
-  
+        });
+    </script>
+
+
+
 
 </body>
 

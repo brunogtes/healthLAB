@@ -15,8 +15,11 @@ use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\PainelMedicoController;
 use App\Http\Controllers\AgendamentoController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExamePacienteController;
+use App\Http\Controllers\PusherNotificationController;
 use App\Http\Controllers\RegistrarUsuarioController;
+use App\Http\Controllers\relatoriosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +39,6 @@ Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->
 Route::put('/perfil/{usuario_id}', [App\Http\Controllers\PerfilController::class, 'update']);
 Route::put('perfil_img/{usuario_id}', [App\Http\Controllers\PerfilController::class, 'upload_imagem']);
 Route::put('perfil/alterarSenha/{usuario_id}', [App\Http\Controllers\PerfilController::class, 'alterarSenha']);
-
 
 Route::get('dashboard', [CustomAuthControlleroller::class, 'dashboard']); 
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
@@ -256,18 +258,32 @@ Route::get('agendamento/{id}/show', [AgendamentoController::class, 'show']);
 
 /* Cadastro de Usuario em Pagina Publica */
 
-
 Route::get('cadastro', [RegistrarUsuarioController::class, 'index']);
 Route::post('/cadastro/create', [RegistrarUsuarioController::class, 'store']);
 Route::get('/cadastro/pegarPlanos/{convenio_id}', [RegistrarUsuarioController::class, 'pegarPlanos']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+/* Dashboard */
+
+Route::get('dashboard', [DashboardController::class, 'index']);
+
+
+/* Relatorio */
+
+Route::get('relatorios/convenioPdf', [relatoriosController::class, 'createConvenioPDF']);
+Route::get('relatorios/planosPdf', [relatoriosController::class, 'createPlanosPDF']);
+Route::get('relatorios/examesPdf', [relatoriosController::class, 'createExamesPDF']);
+Route::get('relatorios/aguardandoColetaPdf', [relatoriosController::class, 'createExameColetaPDF']);
+Route::get('relatorios/aguardandoResultadoPdf', [relatoriosController::class, 'createExameResultadoPDF']);
+Route::get('relatorios/finalizadoPdf', [relatoriosController::class, 'createFinalizadosPDF']);
+Route::get('relatorios/canceladosPdf', [relatoriosController::class, 'createCanceladosPDF']);
+Route::get('/relatorios/customizado', [relatoriosController::class, 'createCustomizadoPDF']);
 
 Route::get('/relatorios', function () {
     return view('relatorios');
 });
+
+
+Route::get('/notificacao', [PusherNotificationController::class, 'sendNotification']);
 
 
 
