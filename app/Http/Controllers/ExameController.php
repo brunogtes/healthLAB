@@ -104,7 +104,7 @@ class ExameController extends Controller
         } else {
             $red = redirect('cadastroExames');
         }
-        return $red;
+        return $red; 
     }
 
     public function ativarAllExames(Request $request)
