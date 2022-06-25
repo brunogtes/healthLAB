@@ -48,6 +48,13 @@
 
     <img src="img/logo.png" height="10%" width="20%" style="margin-left:auto; margin-right:auto; width:auto;  display: block;">
 
+      
+                   
+            
+        <p style="text-align: right;"><b>Periodo:</b>{{date( 'd/m/Y' , strtotime($dataInicial))}} -  {{date( 'd/m/Y' , strtotime($dataFinal))}}</p><br>
+         
+
+    
 
 
     <h1 style="text-align: center;">LISTA DE EXAMES - POR PERíODO</h1>

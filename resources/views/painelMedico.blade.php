@@ -28,14 +28,14 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
 
-                            <select class="form-control" name="filtro_pedidos" id="filtro_pedidos">
+                            <!-- <select class="form-control" name="filtro_pedidos" id="filtro_pedidos">
                                 <option value="">Filtrar</option>
                                 <option value="Aguardando Agendamento">Aguardando Agendamento</option>
                                 <option value="Aguardando Coleta">Aguardando Coleta</option>
                                 <option value="Aguardando Resultado">Aguardando Resultado</option>
                                 <option value="Finalizado">Finalizado</option>
                                 <option value="Cancelado">Cancelados</option>
-                            </select>
+                            </select> -->
 
                         </div>
 

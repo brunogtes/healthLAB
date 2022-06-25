@@ -244,7 +244,7 @@
     <div class="col-md-4">
       <div class="card card-user">
         <div class="image">
-          <img src="../img/bg5.jpg" alt="...">-->
+          <!-- <img src="../img/bg5.jpg" alt="..."> -->
         </div>
         <div class="card-body">
           <div class="author">
@@ -262,7 +262,7 @@
                     @if(Auth::guard('usuarios')->user()->image != null)
                     <img class="avatar border-gray" src="{{url('storage/'.Auth::guard('usuarios')->user()->image)}}">
                     @else
-                    <img class="avatar border-gray" src="../img/default-avatar.png" alt="...">
+                     <img class="avatar border-gray" src="../img/default-avatar.png" alt="..."> 
 
                     @endif
                     <figcaption class="personal-figcaption">
@@ -270,9 +270,9 @@
                     </figcaption>
                   </figure>
                 </label>
-              </div>
+              </div> 
 
-              <button type="submit" name="btn_upload_img" id="btn_upload_img" class="btn btn-primary" style="display: none;"> Salvar
+              <button type="submit" name="btn_upload_img" id="btn_upload_img" class="btn btn-primary" style="display: none;"> 
 
             </form>
 

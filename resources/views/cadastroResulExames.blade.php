@@ -84,7 +84,7 @@
 
                             <div class="row">
 
-                                <div class="col-md-12">
+                                <!-- <div class="col-md-12">
 
                                     <form action="/search" method="get">
 
@@ -96,7 +96,7 @@
                                         </div>
 
                                     </form>
-                                </div>
+                                </div> -->
 
                             </div>
 
@@ -355,23 +355,7 @@
                                     </div>
                                 </div>
                                 @endforeach
-
-
-                                @if ($resulExame->lastPage() > 1)
-                                <ul class="pagination justify-content-end">
-                                    <li class=" {{ ($resulExame->currentPage() == 1) ? ' page-item disabled' : '' }}">
-                                        <a class="page-link" href="{{ $resulExame->url(1) }}">Anterior</a>
-                                    </li>
-                                    @for ($i = 1; $i <= $resulExame->lastPage(); $i++)
-                                        <li class="{{ ($resulExame->currentPage() == $i) ? ' page-item active' : '' }}">
-                                            <a class="page-link" href="{{ $resulExame->url($i) }}">{{ $i }}</a>
-                                        </li>
-                                        @endfor
-                                        <li class="{{ ($resulExame->currentPage() == $resulExame->lastPage()) ? '  page-item disabled' : '' }}">
-                                            <a class="page-link" href="{{ $resulExame->url($resulExame->currentPage()+1) }}">Proximo</a>
-                                        </li>
-                                </ul>
-                                @endif
+                               
 
                             </div>
 
@@ -387,7 +371,7 @@
 
                             <div class="row">
 
-                                <div class="col-md-12">
+                                <!-- <div class="col-md-12">
 
                                     <form action="/search" method="get">
 
@@ -399,7 +383,7 @@
                                         </div>
 
                                     </form>
-                                </div>
+                                </div> -->
 
                             </div>
 
@@ -702,7 +686,7 @@
 
                             <div class="row">
 
-                                <div class="col-md-12">
+                                <!-- <div class="col-md-12">
 
                                     <form action="/search" method="get">
 
@@ -714,7 +698,7 @@
                                         </div>
 
                                     </form>
-                                </div>
+                                </div> -->
 
                             </div>
 
@@ -999,7 +983,7 @@
 
                             <div class="row">
 
-                                <div class="col-md-12">
+                                <!-- <div class="col-md-12">
 
                                     <form action="/search" method="get">
 
@@ -1011,7 +995,7 @@
                                         </div>
 
                                     </form>
-                                </div>
+                                </div> -->
 
                             </div>
 

@@ -20,60 +20,101 @@
 @section('content')
 @can('admin')
 <div class="content">
- 
-<!-- Usuarios -->
-<input type="hidden" name="usuariosAtivos" id="usuariosAtivos" value="{{$usuariosAtivos}}" >
-<input type="hidden" name="usuariosInativos" id="usuariosInativos" value="{{$usuariosInativos}}" >
-<input type="hidden" name="testeBruno" id="testeBruno" value="10,40" >
 
-<!-- Exames -->
+    <!-- Usuarios -->
+    <input type="hidden" name="usuariosAtivos" id="usuariosAtivos" value="{{$usuariosAtivos}}">
+    <input type="hidden" name="usuariosInativos" id="usuariosInativos" value="{{$usuariosInativos}}">
+    <input type="hidden" name="testeBruno" id="testeBruno" value="10,40">
 
-<input type="hidden" name="ExamesAtivos" id="ExamesAtivos" value="{{$ExamesAtivos}}" >
-<input type="hidden" name="ExamesInativos" id="ExamesInativos" value="{{$ExamesInativos}}" >
+    <!-- Exames -->
 
-<!-- Convenios -->
+    <input type="hidden" name="ExamesAtivos" id="ExamesAtivos" value="{{$ExamesAtivos}}">
+    <input type="hidden" name="ExamesInativos" id="ExamesInativos" value="{{$ExamesInativos}}">
 
-<input type="hidden" name="ConveniosAtivo" id="ConveniosAtivo" value="{{$ConveniosAtivo}}" >
-<input type="hidden" name="ConveniosInativos" id="ConveniosInativos" value="{{$ConveniosInativos}}" >
+    <!-- Convenios -->
 
-<!-- Status Exames -->
+    <input type="hidden" name="ConveniosAtivo" id="ConveniosAtivo" value="{{$ConveniosAtivo}}">
+    <input type="hidden" name="ConveniosInativos" id="ConveniosInativos" value="{{$ConveniosInativos}}">
 
-<input type="hidden" name="aguardandoColeta" id="aguardandoColeta" value="{{$aguardandoColeta}}" >
-<input type="hidden" name="aguardandoResultado" id="aguardandoResultado" value="{{$aguardandoResultado}}" >
-<input type="hidden" name="exameFinalizado" id="exameFinalizado" value="{{$exameFinalizado}}" >
-<input type="hidden" name="exameCancelado" id="exameCancelado" value="{{$exameCancelado}}" >
+    <!-- Status Exames -->
 
-<!-- Quantidade de Exames - Mensal -->
+    <input type="hidden" name="aguardandoColeta" id="aguardandoColeta" value="{{$aguardandoColeta}}">
+    <input type="hidden" name="aguardandoResultado" id="aguardandoResultado" value="{{$aguardandoResultado}}">
+    <input type="hidden" name="exameFinalizado" id="exameFinalizado" value="{{$exameFinalizado}}">
+    <input type="hidden" name="exameCancelado" id="exameCancelado" value="{{$exameCancelado}}">
 
-<input type="hidden" name="qtdMes1" id="qtdMes1" value="{{$qtdMes1}}" >
-<input type="hidden" name="qtdMes2" id="qtdMes2" value="{{$qtdMes2}}" >
-<input type="hidden" name="qtdMes3" id="qtdMes3" value="{{$qtdMes3}}" >
-<input type="hidden" name="qtdMes4" id="qtdMes4" value="{{$qtdMes4}}" >
-<input type="hidden" name="qtdMes5" id="qtdMes5" value="{{$qtdMes5}}" >
-<input type="hidden" name="qtdMes6" id="qtdMes6" value="{{$qtdMes6}}" >
-<input type="hidden" name="qtdMes7" id="qtdMes7" value="{{$qtdMes7}}" >
-<input type="hidden" name="qtdMes8" id="qtdMes8" value="{{$qtdMes8}}" >
-<input type="hidden" name="qtdMes9" id="qtdMes9" value="{{$qtdMes9}}" >
-<input type="hidden" name="qtdMes10" id="qtdMes10" value="{{$qtdMes10}}" >
-<input type="hidden" name="qtdMes11" id="qtdMes11" value="{{$qtdMes11}}" >
-<input type="hidden" name="qtdMes12" id="qtdMes12" value="{{$qtdMes12}}" >
+    <!-- Quantidade de Exames - Mensal -->
 
-<input type="hidden" name="teste" id="teste" value="{{$teste}}" >
+    <input type="hidden" name="qtdMes1" id="qtdMes1" value="{{$qtdMes1}}">
+    <input type="hidden" name="qtdMes2" id="qtdMes2" value="{{$qtdMes2}}">
+    <input type="hidden" name="qtdMes3" id="qtdMes3" value="{{$qtdMes3}}">
+    <input type="hidden" name="qtdMes4" id="qtdMes4" value="{{$qtdMes4}}">
+    <input type="hidden" name="qtdMes5" id="qtdMes5" value="{{$qtdMes5}}">
+    <input type="hidden" name="qtdMes6" id="qtdMes6" value="{{$qtdMes6}}">
+    <input type="hidden" name="qtdMes7" id="qtdMes7" value="{{$qtdMes7}}">
+    <input type="hidden" name="qtdMes8" id="qtdMes8" value="{{$qtdMes8}}">
+    <input type="hidden" name="qtdMes9" id="qtdMes9" value="{{$qtdMes9}}">
+    <input type="hidden" name="qtdMes10" id="qtdMes10" value="{{$qtdMes10}}">
+    <input type="hidden" name="qtdMes11" id="qtdMes11" value="{{$qtdMes11}}">
+    <input type="hidden" name="qtdMes12" id="qtdMes12" value="{{$qtdMes12}}">
 
-<!-- Quantidade de Coletas - Mensal-->
+    <input type="hidden" name="teste" id="teste" value="{{$teste}}">
 
-<input type="hidden" name="qtdColetaMes1" id="qtdColetaMes1" value="{{$qtdColetaMes1}}" >
-<input type="hidden" name="qtdColetaMes2" id="qtdColetaMes2" value="{{$qtdColetaMes2}}" >
-<input type="hidden" name="qtdColetaMes3" id="qtdColetaMes3" value="{{$qtdColetaMes3}}" >
-<input type="hidden" name="qtdColetaMes4" id="qtdColetaMes4" value="{{$qtdColetaMes4}}" >
-<input type="hidden" name="qtdColetaMes5" id="qtdColetaMes5" value="{{$qtdColetaMes5}}" >
-<input type="hidden" name="qtdColetaMes6" id="qtdColetaMes6" value="{{$qtdColetaMes6}}" >
-<input type="hidden" name="qtdColetaMes7" id="qtdColetaMes7" value="{{$qtdColetaMes7}}" >
-<input type="hidden" name="qtdColetaMes8" id="qtdColetaMes8" value="{{$qtdColetaMes8}}" >
-<input type="hidden" name="qtdColetaMes9" id="qtdColetaMes9" value="{{$qtdColetaMes9}}" >
-<input type="hidden" name="qtdColetaMes10" id="qtdColetaMes10" value="{{$qtdColetaMes10}}" >
-<input type="hidden" name="qtdColetaMes11" id="qtdColetaMes11" value="{{$qtdColetaMes11}}" >
-<input type="hidden" name="qtdColetaMes12" id="qtdColetaMes12" value="{{$qtdColetaMes12}}" >
+    <!-- Quantidade de Coletas - Mensal-->
+
+    <input type="hidden" name="qtdColetaMes1" id="qtdColetaMes1" value="{{$qtdColetaMes1}}">
+    <input type="hidden" name="qtdColetaMes2" id="qtdColetaMes2" value="{{$qtdColetaMes2}}">
+    <input type="hidden" name="qtdColetaMes3" id="qtdColetaMes3" value="{{$qtdColetaMes3}}">
+    <input type="hidden" name="qtdColetaMes4" id="qtdColetaMes4" value="{{$qtdColetaMes4}}">
+    <input type="hidden" name="qtdColetaMes5" id="qtdColetaMes5" value="{{$qtdColetaMes5}}">
+    <input type="hidden" name="qtdColetaMes6" id="qtdColetaMes6" value="{{$qtdColetaMes6}}">
+    <input type="hidden" name="qtdColetaMes7" id="qtdColetaMes7" value="{{$qtdColetaMes7}}">
+    <input type="hidden" name="qtdColetaMes8" id="qtdColetaMes8" value="{{$qtdColetaMes8}}">
+    <input type="hidden" name="qtdColetaMes9" id="qtdColetaMes9" value="{{$qtdColetaMes9}}">
+    <input type="hidden" name="qtdColetaMes10" id="qtdColetaMes10" value="{{$qtdColetaMes10}}">
+    <input type="hidden" name="qtdColetaMes11" id="qtdColetaMes11" value="{{$qtdColetaMes11}}">
+    <input type="hidden" name="qtdColetaMes12" id="qtdColetaMes12" value="{{$qtdColetaMes12}}">
+
+
+
+
+    <div class="card card-chart">
+        <div class="card-header">
+            <h4 class="card-title">Escolha o Ano:</h4>
+
+        </div>
+        <div class="card-body">
+
+
+            <form action="/dashboard/filter" method="get">
+                <div class="row">
+
+                    <div class="col-md-10">
+                        <select name="filterYear1" id="filterYear1" class="form-control">
+                            <option value=""></option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-md-2">
+
+                        <button type="submit" name="btnRelatorio" id="btnRelatorio" class="btn btn-secondary"><span class="glyphicon glyphicon-check"></span>Filtrar</a>
+                            
+                    </div>
+
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
 
 
 
@@ -119,12 +160,15 @@
         </div>
     </div>
     <div class="row">
+
         <div class="col-md-12">
             <div class="card  card-tasks">
                 <div class="card-header ">
                     <h5 class="card-title">Quantidade de Exames - Mensal</h5>
                 </div>
+
                 <div class="card-body ">
+
                     <div class="chart-area">
                         <canvas id="barChart"></canvas>
                     </div>
@@ -147,11 +191,11 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Quantidade de Coletas -  Mensal</h5>
+                    <h5 class="card-title">Quantidade de Coletas - Mensal</h5>
                 </div>
                 <div class="card-body">
                     <div class="chart-area">
-                    <canvas id="horizontalBar"></canvas>
+                        <canvas id="horizontalBar"></canvas>
                     </div>
                 </div>
             </div>
@@ -177,4 +221,3 @@
 </div>
 
 @endsection
-
