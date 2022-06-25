@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
- .personal-image {
+ .personal-image { 
     text-align: center;
   }
   .personal-image input[type="file"] {
