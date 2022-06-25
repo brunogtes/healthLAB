@@ -2,7 +2,7 @@
 
 return [
 
-    'defaults' => [
+    'defaults' => [ 
         'guard' => 'usuarios',
         'passwords' => 'usuarios',
     ],
